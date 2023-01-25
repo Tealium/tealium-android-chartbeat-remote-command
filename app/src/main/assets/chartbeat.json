@@ -1,0 +1,17 @@
+{
+  "config": {
+    "account_id": "",
+    "site_id": ""
+  },
+  "mappings": {
+    "view_name": "view_id",
+    "view_title": "view_name"
+  },
+  "commands": {
+    "launch": "initialize",
+    "home_view": "logview",
+    "order_confirmation": "loguserpaid",
+    "login_success": "loguserloggedin",
+    "user_logout": "loguseranonymous"
+  }
+}
