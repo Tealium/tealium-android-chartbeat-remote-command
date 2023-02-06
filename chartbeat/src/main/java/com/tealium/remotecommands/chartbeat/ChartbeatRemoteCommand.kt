@@ -4,7 +4,6 @@ import android.app.Application
 import android.util.Log
 import com.tealium.remotecommands.RemoteCommand
 import org.json.JSONObject
-import java.util.*
 
 class ChartbeatRemoteCommand(
     private val application: Application,
@@ -12,7 +11,7 @@ class ChartbeatRemoteCommand(
     private val chartbeatSiteId: String? = null,
     commandId: String = DEFAULT_COMMAND_ID,
     description: String = DEFAULT_COMMAND_DESCRIPTION
-): RemoteCommand(commandId, description) {
+): RemoteCommand(commandId, description, BuildConfig.TEALIUM_CHARTBEAT_VERSION) {
 
     internal var chartbeatInstance: ChartbeatCommand = ChartbeatInstance(application, chartbeatAccountId, chartbeatSiteId)
 
@@ -22,7 +21,7 @@ class ChartbeatRemoteCommand(
         parseCommands(commands, payload)
     }
 
-    fun parseCommands(commands: Array<String>, payload: JSONObject) {
+    internal fun parseCommands(commands: Array<String>, payload: JSONObject) {
         commands.forEach { command ->
             Log.d(BuildConfig.TAG, "Processing command: $command with payload: $payload")
             when (command) {
