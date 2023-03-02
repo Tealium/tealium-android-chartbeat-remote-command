@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         TealiumHelper.trackEvent("launch", emptyMap())
 
         logViewButton.setOnClickListener {
-            TealiumHelper.trackView("home_view", mapOf("view_name" to "Home", "view_title" to "TealiumChartbeatSampleHome"))
+            TealiumHelper.trackView("home_view", mapOf("view_name" to "Android Home", "view_title" to "TealiumChartbeatSampleHome"))
         }
 
         logUserLoggedInButton.setOnClickListener {

@@ -25,7 +25,10 @@ object TealiumHelper {
             "tealiummobile",
             "android",
             Environment.DEV,
-            dispatchers = mutableSetOf(Dispatchers.RemoteCommands, Dispatchers.TagManagement)
+            dispatchers = mutableSetOf(
+                Dispatchers.RemoteCommands,
+                Dispatchers.TagManagement
+            )
         ).apply {
             useRemoteLibrarySettings = true
         }
