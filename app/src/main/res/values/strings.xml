@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Chartbeat</string>
+    <string name="log_view">Log View</string>
+    <string name="log_user_paid">Log User Paid</string>
+    <string name="log_user_logged_in">Log User Logged In</string>
+    <string name="log_anonymous_user">Log Anonymous User</string>
+</resources>
